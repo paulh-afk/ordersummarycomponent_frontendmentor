@@ -1,2 +1,102 @@
 @import 'reset';
 @import 'base';
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: url('../images/pattern-background-desktop.svg') hsl(225, 100%, 94%) no-repeat top;
+  background-size: 100%;
+}
+
+.card {
+  width: 45rem;
+  .bg-presentation {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background: url('../images/illustration-hero.svg') no-repeat;
+    height: 22rem;
+  }
+  .product {
+    display: grid;
+    place-items: center;
+    background: #fff;
+    padding: 4.5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    & > h3 {
+      text-align: center;
+      font-size: 2.7rem;
+      color: hsl(223, 47%, 23%);
+    }
+    & > p {
+      text-align: center;
+      color: hsl(224, 23%, 55%);
+      line-height: 2.5rem;
+    }
+    .plans {
+      border-radius: 1.5rem;
+      width: 100%;
+      background: hsla(225, 100%, 94%, 0.5);
+      display: flex;
+      align-items: center;
+      padding: 2rem 2.5rem;
+      margin-bottom: 3rem;
+      .plans-logo {
+        flex: initial;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        background: url('../images/icon-music.svg') no-repeat center;
+      }
+      .plan-billing {
+        flex: 1;
+        padding-left: 2rem;
+        b {
+          font-weight: 700;
+          color: hsl(223, 47%, 23%);
+        }
+        p {
+          color: hsl(224, 23%, 55%);
+          margin-bottom: 0;
+        }
+      }
+      .plan-change {
+        flex: initial;
+        cursor: pointer;
+        text-decoration: underline;
+        color: hsl(245, 75%, 52%);
+        font-weight: 700;
+        font-size: 1.3rem;
+        &:active {
+          text-decoration: none;
+          color: hsla(245, 75%, 52%, 0.7);
+        }
+      }
+    }
+    .plan-actions {
+      width: 100%;
+      button {
+        background: hsl(245, 75%, 52%);
+        color: hsl(225, 100%, 98%);
+        box-shadow: rgba(56, 41, 224, 0.17) 0 1.5rem 1rem;
+        &:active {
+          background: hsla(245, 75%, 52%, 0.7);
+        }
+      }
+      p {
+        padding: 1.5rem;
+        color: hsl(224, 23%, 55%);
+        text-align: center;
+        font-weight: 900;
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        cursor: pointer;
+        &:active {
+          color: hsl(223, 47%, 23%);
+        }
+      }
+    }
+  }
+}
